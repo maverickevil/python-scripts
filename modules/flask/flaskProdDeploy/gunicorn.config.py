@@ -20,7 +20,7 @@ accesslog = 'logs/access.log'
 errorlog = 'logs/error.log'
 
 # 设置守护进程
-# daemon = True              # 如果用Supervisor来管理的话，需要注释该选项
+daemon = True                # 若直接使用Gunicorn来管理，需启用该选项; 若使用Supervisor来管理的话，需要注释该选项
 
 # 并行工作进程数
 workers = multiprocessing.cpu_count() * 2 + 1
